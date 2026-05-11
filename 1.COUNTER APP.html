@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <style>
+        body{
+            background-color: rgb(226, 194, 209) ;
+            margin: 30px;
+            padding: 170px;
+            text-align: center;
+        }
+        button{
+           
+            text-align: center;
+            width: 150px;
+            color: rgb(237, 178, 205);
+            background-color: rgb(125, 46, 102);
+            padding: 40px;
+            border-radius: 70px;
+            margin: 20px;
+            border: 2px solid  rgb(203, 98, 147) ;
+             transition: 0.3s;  /* smooth flow */
+        }
+        button:hover{
+             background-color:rgb(184, 96, 159); ;
+               transform: scale(1.1); /* make bigger */
+               box-shadow: 0 0 20px rgba(242, 237, 241, 0.7); /* glow */
+        }
+        h2{
+           
+            text-align: center;
+            font-weight: 900;}
+        h1{
+            text-align: center;
+            font-family :Georgia, 'Times New Roman', Times, serif;
+            margin-bottom: 70px;
+             transition: 0.3s;  /* smooth flow */
+        }
+        h1:hover{
+            color: rgb(104, 4, 59);
+              transform: scale(1.1); /* make bigger */
+              box-shadow: 0 0 20px rgba(242, 237, 241, 0.7); /* glow */
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1 >Simple Counter App</h1>
+    <button class="increase">Increase</button> 
+    <button class="decrease">Decrease</button> 
+    <button class="reset">Reset</button> 
+    <h2>0</h2>
+    <!-- Create a simple counter application where user can increase/ decrease and reset a number -->
+</body>
+<script>
+    count = 0;
+    let ibtn = document.querySelector(".increase")
+    ibtn.addEventListener("click",()=>{
+        count++;
+        console.log(count)
+        headone.textContent = count
+    })
+    let dbtn = document.querySelector(".decrease")
+    dbtn.addEventListener("click",()=>{
+        count--;
+        console.log(count)
+        headone.textContent = count
+    })
+    let rbtn = document.querySelector(".reset")
+    rbtn.addEventListener("click",()=>{
+        count = 0;
+        console.log(count)
+        headone.textContent = count
+    })
+    let headone = document.querySelector("h2")
+    
+</script>
+</html>
